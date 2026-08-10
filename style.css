@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: Aria, sans-serif;
 }
 
 .header {
@@ -25,27 +25,33 @@
   box-shadow: 0 3px 12px rgba(0, 0, 0,.1);
 }
 
+
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #1a2b3c;
-  font-weight: bold;
-  font-size: 22px;
+    display: flex;
+    align-items:center;
+    gap: 8px;
+    font-size:22px;
+    color: #0d7d79;
+    font-weight: bold;
 }
 
 .nutBam {
-  background-color: #15757c;
-  color: #FFFFFF;
-  padding: 10px 20px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 20px;
+  display:block;
+    width: 230px;
+    margin: 40px auto;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    background: #0b7d79;
+    color: white;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 .nutBam:hover {
-  background: #0d5b60;
-  color: #fff;
+  background: #0f9c95;
+    transform: translateY(-3px);
 }
 
 .nav-links {
@@ -54,6 +60,7 @@
   list-style: none;
   margin: 20;
   padding: 30;
+  align-items: center;
 }
 
 .nav-links a {
@@ -63,6 +70,7 @@
   font-size: 17px;
   font-weight: 600;
   padding: 8px 16px;
+  white-space: nowrap;
 }
 
 .nav-links a.active,
@@ -163,17 +171,35 @@ footer {
   padding: 20px;
 }
 .user-menu {
-  font-size: 24px;
-  color:#15757c;
+    display: flex;
+    align-items:center;
+    gap: 18px;
+    color:#0d7d79;
+    font-weight:600;
+    white-space: nowrap;
+}
+.user-menu i {
+    color: #15757c;
+    font-size: 24px;
 }
 .logoutBtn {
-  background:#15757c;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-family: Arial;
+    border: none;
+    background: #0d7d79;
+    color: #FFFFFF;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.logoutBtn {
+    border: none;
+    background: #0d7d79;
+    color:#FFFFFF;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.logoutBtn {
+    background: #0f9c95;
 }
 .logoutBtn:hover {
   background: #0d5b60;

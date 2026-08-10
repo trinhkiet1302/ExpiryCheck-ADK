@@ -1,0 +1,102 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "icon" href = "ExpiryCheck.jpg">
+        <link rel="stylesheet" href="gioithieu.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        />
+        <title>Giới Thiệu Về ExpiryCheck</title>
+    </head>
+    <body>
+         <nav class="navbar">
+          <div class="logo">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span>ExpiryCheck</span>
+          </div>
+            <ul class="nav-links">
+              <li><a href="index.html">Trang Chủ</a></li>
+              <li><a href="kiemtrahsd.html" class = "feature-link">Kiểm Tra Ngay</a></li>
+              <li><a href="tinhnang.html">Tính Năng</a></li>
+              <li><a href="huongdan.html">Hướng Dẫn</a></li>
+              <li><a class="active" href="gioithieu.html">Giới Thiệu</a></li>
+            </ul>
+            <div id = "navAuth" class="navAuth">
+                <a class = "nutbam" href = "dangnhap.html">
+                    Đăng Nhập | Đăng Ký
+                </a>
+            </div>
+          </nav>
+        <div class="about-banner">
+            <div class="banner-content">
+                <h1>Giới thiệu về ExpiryCheck</h1>
+            <p>
+                Đồng hành cùng bạn trong việc bảo vệ sức khỏe bạn mỗi ngày.
+            </p>
+            </div>
+        </div>
+        <div class="about-page">
+            <h2>Mục tiêu của website</h2>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Hỗ trợ người dùng kiểm tra và theo dõi hạn sử dụng của sản phẩm.
+                </li>
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Giảm nguy cơ sử dụng thực phẩm, mỹ phẩm hoặc thuốc hết hạn.
+                </li>
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Cung cấp giao diện trực quan, dễ sử dụng trên nhiều thiết bị.
+                </li>
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Giúp người dùng quản lý sản phẩm hiệu quả, tiết kiệm thời gian.
+                </li>
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Nâng cao ý thức bảo vệ sức khỏe thông qua việc sử dụng sản phẩm còn trong thời gian an toàn
+                </li>
+            </ul>
+        </div>
+        <form class = "feedback-form">
+            <h2>Góp ý cho ADK Team</h2>
+            <p>
+                Chúng tôi rất mong nhận được sự góp của bạn để cải thiện website. Vui lòng nhấn vào nút bên dưới để đóng góp ý kiến
+            </p>
+            <a href = "https://docs.google.com/forms/d/e/1FAIpQLSf_Jkq19RC2cjsyxK_dKVbJLdOZYjrCzTkqmpRvk34YoRPH7g/viewform"
+                target="_blank"
+                class = "btn-feedback">
+                Đi đến biểu mẫu
+            </a>
+        </form>
+        <a href = "index.html" class = "nutbam">
+                <i class="fa-solid fa-arrow-left"></i>
+                Quay về Trang chủ
+        </a>
+        <script src ="auth.js"></script>
+        <script>
+            window.addEventListener("DOMContentLoaded", function (){
+            const user = getCurrentUser();
+            const navAuth = document.getElementById("navAuth");
+            if(user) {
+                navAuth.innerHTML = `
+                    <div class = "user-menu">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Xin chào, ${user.fullName} </span>  
+                        <button id = "logoutBtn" class = "logoutBtn">Đăng xuất</button>
+                    </div>
+                `;
+                  document.getElementById("logoutBtn").onclick = function() {
+                    logoutUser();
+                    location.href = "index.html";
+                };
+            }
+        })
+    </script>
+</body>
+</html>

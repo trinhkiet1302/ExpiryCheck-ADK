@@ -88,6 +88,6 @@ function getCurrentUser() {
     }
     return null;
 }
-function logoutUser() { // logout
+function logoutUser() { 
     localStorage.removeItem(SESSION_KEY);
 }

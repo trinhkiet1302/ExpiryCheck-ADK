@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExpiryCheck - Website Kiểm Tra Hạn Sử Dụng Của Sản Phẩm</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel = "icon" href = "ExpiryCheck.jpg">
     <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
     <link rel="stylesheet" href="kthsd.css">
 </head>
 <body>
-
-    <div class="top-title-banner">
-        ExpiryCheck - Website Kiểm Tra Hạn Sử Dụng Của Sản Phẩm
-    </div>
-
+    <div class = "page-header-wrapper">
     <header>
-        <a href="#" class="logo"><i class="fa-regular fa-calendar-check"></i> ExpiryCheck</a>
-        <nav>
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
-                <li><a href="#" class="active"><i class="fa-solid fa-magnifying-glass"></i> Kiểm Tra Ngay</a></li>
-                <li><a href="#"><i class="fa-solid fa-star"></i> Tính Năng</a></li>
-                <li><a href="#"><i class="fa-solid fa-book"></i> Hướng Dẫn</a></li>
-                <li><a href="#"><i class="fa-solid fa-circle-info"></i> Giới Thiệu</a></li>
+         <nav class="navbar">
+            <a class="logo">
+                 <i class="fa-regular fa-calendar-check"></i>
+                ExpiryCheck
+            </a>
+            <ul class = "nav-links">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="kiemtrahsd.html" class="active">Kiểm Tra Ngay</a></li>
+                    <li><a href="tinhnang.html">Tính Năng</a></li>
+                    <li><a href="huongdan.html">Hướng Dẫn</a></li>
+                    <li><a href="gioithieu.html">Giới Thiệu</a></li>
             </ul>
-        </nav>
-        <a href="#" class="auth-btn"><i class="fa-solid fa-user-lock"></i> Đăng Nhập | Đăng Ký</a>
-    </header>
+            <div id = "navAuth">
+                <a href="dangnhap.html" class="nutbam">Đăng Nhập | Đăng Ký</a>
+            </div>
+         </nav>
+        </header>
+    </div>
     <section class="hero-bg">
         <div class="welcome-badge"><i class="fa-solid fa-bolt"></i> Hệ thống nhận diện thời gian thực</div>
         <h1 class="hero-text-main">Kiểm Tra Hạn Sử Dụng</h1>
@@ -50,7 +52,7 @@
         </div>
         <div class="manual-form-content">
             <div class="form-group">
-<label><i class="fa-solid fa-box-open"></i> Tên sản phẩm</label>
+                <label><i class="fa-solid fa-box-open"></i> Tên sản phẩm</label>
                 <input type="text" id="prodName" class="form-control" placeholder="Ví dụ: Sữa tươi Vinamilk, Kem chống nắng...">
             </div>
 
@@ -65,12 +67,42 @@
                 </div>
             </div>
 
-            <button class="btn-submit-check" onclick="checkExpiryDate()">
-                <i class="fa-solid fa-circle-play"></i> BẮT ĐẦU KIỂM TRA
-            </button>
+            <div class="check-buttons">
+
+                <button class="btn-submit-check" onclick="checkExpiryDate()">
+                    <i class="fa-solid fa-circle-play"></i>
+                    BẮT ĐẦU KIỂM TRA
+                </button>
+
+                <button class="btn-save-product" onclick="saveCheckedProduct()">
+                    <i class="fa-solid fa-bookmark"></i>
+                    LƯU SẢN PHẨM
+                </button>
+
+            </div>
         </div>
         <div id="resultBox" class="result-alert"></div>
     </div>
-    <script src="script.js"></script>
+    <script src ="auth.js"></script>
+    <script src="kthsd.js"></script>
+    <script>
+            window.addEventListener("DOMContentLoaded", function (){
+            const user = getCurrentUser();
+            const navAuth = document.getElementById("navAuth");
+            if(user && navAuth) {
+                navAuth.innerHTML = `
+                    <div class = "user-menu">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Xin chào, ${user.fullName} </span>  
+                        <button id = "logoutBtn" class = "logoutBtn">Đăng xuất</button>
+                    </div>
+                `;
+                document.getElementById("logoutBtn").onclick = function() {
+                    logoutUser();
+                    location.href = "index.html";
+                };
+            }
+        })
+    </script>
 </body>
 </html>
