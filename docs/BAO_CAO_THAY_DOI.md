@@ -4,7 +4,7 @@ Ngày cập nhật: **17/08/2026**
 Phạm vi mã nguồn: thư mục dự án `D:\Ai\ADKTeam (4)\ADKTeam`  
 Mục tiêu: hoàn thiện đồ án theo phiếu chấm 10 điểm, sửa lỗi chức năng/giao diện, tăng an toàn và khả năng truy cập, tổ chức lại mã nguồn, thêm animation, hướng dẫn chạy và loại bỏ file không cần thiết.
 
-> Đây là báo cáo của mã nguồn local. Website <https://trinhkiet1302.github.io/ExpiryCheck/> chỉ thay đổi sau khi mã nguồn được commit, push lên đúng branch GitHub Pages và deploy hoàn tất.
+> Đây là báo cáo của mã nguồn local. Website <https://trinhkiet1302.github.io/ExpiryCheck-ADK/> chỉ thay đổi sau khi mã nguồn được commit, push lên đúng branch GitHub Pages và deploy hoàn tất.
 
 ## 1. Tóm tắt kết quả
 
