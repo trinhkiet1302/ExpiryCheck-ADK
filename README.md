@@ -73,4 +73,4 @@ Không nộp hoặc commit thư mục `node_modules/`; có thể khôi phục n�
 
 ExpiryCheck không có backend. Hồ sơ, sản phẩm, đánh giá và góp ý được lưu trong `localStorage` của đúng trình duyệt và đúng origin đang dùng. Hướng dẫn này dùng thống nhất `127.0.0.1:8080`; nếu đổi sang `localhost` hoặc cổng khác, trình duyệt sẽ dùng vùng dữ liệu khác. Khi tra mã vạch, mã sản phẩm được gửi tới Open Food Facts theo yêu cầu của người dùng.
 
-Phiên bản công khai: <https://trinhkiet1302.github.io/ExpiryCheck/>. Thay đổi local chỉ xuất hiện trên link này sau khi commit, push lên đúng nhánh GitHub Pages và chờ deploy hoàn tất.
+Phiên bản công khai: <https://trinhkiet1302.github.io/ExpiryCheck-ADK/>. Thay đổi local chỉ xuất hiện trên link này sau khi commit, push lên đúng nhánh GitHub Pages và chờ deploy hoàn tất.
