@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://trinhkiet1302.github.io/ExpiryCheck/sitemap.xml
+Sitemap: https://trinhkiet1302.github.io/ExpiryCheck-ADK/sitemap.xml
